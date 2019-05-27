@@ -138,7 +138,7 @@ fi
 
 #Install Java 8
 JAVA_VER=$(java -version 2>&1 | grep -i version | sed 's/.*version ".*\.\(.*\)\..*"/\1/; 1q')
-if [ "$JAVA_VER" != "8" ] && [ "$install_java" = "true" ]; then
+if [ "$JAVA_VER" = "8" ] && [ "$install_java" = "true" ]; then
     echo "installing java 8 ..."
     cd /opt/
     # wget --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" $dl_link_java
